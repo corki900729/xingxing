@@ -1,0 +1,166 @@
+<script type="text/javascript">
+ function quandel(obj,cName){
+    var checkall=document.getElementsByName(cName);
+	for(var $i=0;$i<checkall.length;$i++){
+	      checkall[$i].checked=obj.checked;
+	}
+ }
+   
+</script>
+<div class="panel panel-default">
+				<div class="panel-heading" style="padding:0px;">
+				<h3 class="panel-title" style="color:#7c38bc;font-weight:bold;"> <a href="{:U('Admin/article/arcadd')}"> SEO关键字设置</a></h3>
+<div class="row" style="margin-left:90%;">
+	
+			</div>
+				</div>
+				<!--<a class="btn btn-secondary btn-sm btn-icon icon-left" href="{:U('Seo/editrule')}">新增</a>  <button class="btn btn-secondary btn-sm btn-icon icon-left" type="button" id="del">删除</button>-->  <button class="btn btn-secondary btn-sm btn-icon icon-left" type="buton" id="open">开启</button> <button class="btn btn-secondary btn-sm btn-icon icon-left" type="button" id="ban">禁用</button>
+				<form id="form1" onsubmit="return false">
+				<div class="panel-body">
+			
+					<table class="table table-bordered table-striped" id="example-2">
+						<thead>
+							<tr>
+								<th><input type="checkbox">ID</th>
+								<th style="width:10%">标题</th>
+								<th style="width:10%">模块</th>
+								<th style="width:10%">控制器</th>
+								<th style="width:10%">方法</th>
+								<th style="width:10%">SEO标题</th>
+								<th style="width:10%">SEO关键字</th>
+								<th style="width:10%">SEO描述</th>
+								<th style="width:7%">状态</th>
+								<th style="width:18%">操作</th> 
+							</tr>
+						</thead>
+						
+						<tbody class="middle-align">		
+				
+							<volist name="ruleList" id="v">
+							<tr>
+							<td><input type="checkbox" name="ids" value="{$v.id}"></td>
+							<td>{$v.title}</td> 
+							<td>{$v.app}</td>
+							<td>{$v.controller}</td>
+							<td>{$v.action}</td>
+							<td>{$v.seo_title}</td>
+							<td>{$v.seo_keywords}</td>
+							<td>{$v.seo_description}</td>
+							<td><if condition="$v['status'] eq 1">开启<elseif condition="$v['status'] eq 0"/>禁止</if></td>
+							
+								<td>
+									
+									<a href="{:U('Admin/Seo/editrule',array('id'=>$v['id']))}" class="btn btn-secondary btn-sm btn-icon icon-left">
+										修改
+									</a>
+									
+									
+								</td> 
+							</tr>
+                            </volist>
+						</tbody>
+					</table>
+				<div class="pagination">{$show}</div>
+				</div>
+				
+	    <!--  <button class="btn btn-danger" type="submit" name="submit" onclick="delmores()">批量删除</button> -->
+		</form>
+			</div>
+
+<script type="text/javascript">
+    
+				
+				
+					
+					$("#del").click(function(){
+					
+					var ids =[]; 
+				$('input[name="ids"]:checked').each(function(){ 
+				ids.push($(this).val()); 
+				});
+					
+					
+					
+					$.ajax({
+								type:'post',
+								url:"{:U('Seo/setRuleStatus')}",
+								data:{ids:ids,status:-1},
+								success:function(msg){
+							
+									if(msg.status==1){
+										layer.msg('操作成功！', {icon:1});
+									 setTimeout(function () {
+                        window.location.href = "/index.php/Admin/Seo/index.html";
+                    }, 1500);
+									}else{
+										layer.msg('操作失败！', {icon:2});
+										
+									}
+								}
+							});
+					
+					
+					})	
+			
+				$("#open").click(function(){
+					
+					var ids =[]; 
+				$('input[name="ids"]:checked').each(function(){ 
+				ids.push($(this).val()); 
+				});
+					
+					
+					
+					$.ajax({
+								type:'post',
+								url:"{:U('Seo/setRuleStatus')}",
+								data:{ids:ids,status:1},
+								success:function(msg){
+							
+									if(msg.status==1){
+										layer.msg('操作成功！', {icon:1});
+									 setTimeout(function () {
+                        window.location.href = "/index.php/Admin/Seo/index.html";
+                    }, 1500);
+									}else{
+										layer.msg('操作失败！', {icon:2});
+										
+									}
+								}
+							});
+					
+					
+					})	
+					
+					$("#ban").click(function(){
+					
+					var ids =[]; 
+				$('input[name="ids"]:checked').each(function(){ 
+				ids.push($(this).val()); 
+				});
+					
+					
+					
+					$.ajax({
+								type:'post',
+								url:"{:U('Seo/setRuleStatus')}",
+								data:{ids:ids,status:0},
+								success:function(msg){
+							
+									if(msg.status==1){
+										layer.msg('操作成功！', {icon:1});
+									 setTimeout(function () {
+                        window.location.href = "/index.php/Admin/Seo/index.html";
+                    }, 1500);
+									}else{
+										layer.msg('操作失败！', {icon:2});
+										
+									}
+								}
+							});
+					
+					
+					})	
+					 
+					
+				</script>

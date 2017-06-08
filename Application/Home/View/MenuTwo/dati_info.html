@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>克拉玛依</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/whd.css"/>
+</head>
+
+<body>
+<div class="container kpjd-detail">
+    <div class="title">{$dati['title']}</div>
+    <notempty name="dati['content']">
+        <div style="font-size: 16px;margin-left: 8px;">{$dati['content']|htmlspecialchars_decode}</div>
+    </notempty>
+    <div></div>
+    <div class="from">
+        <empty name="$dati['nickname']">
+            <div style="margin-left: -10px"><span>系统管理员</span><span>{$dati['time']|date='Y-m-d',###}</span></div>
+            <else/>
+            <div><img src="{$dati['headurl']}"/><span>{$dati['nicename']}</span><span>{$dati['time']|date='Y-m-d',###}</span></div>
+            <div class="visited">
+                <p>回答:<span>{$dati['sum']}</span></p>
+                <p><img src="__PUBLIC__/home/img/see.png"/><span>{$dati['count']}</span></p>
+            </div>
+        </empty>
+    </div>
+    <div class="answer-list">
+        <p class="sum">共有{$count}个回答</p>
+        <ul>
+            <volist name="list" id="vo">
+            <li>
+                <div class="user">
+                    <img src="{$vo.headurl}"/>{$vo.nickname}
+                </div>
+                <div class="answer">
+                    {$vo.daan}
+                </div>
+            </li>
+            </volist>
+        </ul>
+    </div>
+    <a href="{:U('huida',array('id'=>$dati['id']))}" class="answer-btn">我要回答</p>
+</div>
+</body>
+
+</html>

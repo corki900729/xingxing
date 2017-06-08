@@ -1,0 +1,12 @@
+[ 2016-08-07T16:43:53+08:00 ] 182.119.15.91 /User/Index/verify.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0274s ]
+SQL: SELECT * FROM `lx_admin` WHERE `name` = 'admin' AND `pwd` = '96e79218965eb72c92a549dd5a330112' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `lx_record` [ RunTime:0.0071s ]
+SQL: INSERT INTO `lx_record` (`admin_id`,`last_login`,`ip`) VALUES ('1','1470559433','182.119.15.91') [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+

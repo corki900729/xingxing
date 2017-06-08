@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>克拉玛依</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/whd.css"/>
+</head>
+
+<body>
+<div class="container rwph" style="background: #EEEEEE;">
+    <ul class="rwph-content">
+        <volist name="list" id="vo">
+            <a href="{:U('MenuTwo/info',array('id'=>$vo['id']))}">
+                <li>
+                    <div class="left">
+                        <img src="{$vo.img}"/>
+                        <span></span>
+                    </div>
+                    <div class="info">
+                        <div class="title">{$vo.name}</div>
+                        <div class="other">
+                            <p><img src="__PUBLIC__/home/img/see.png"/>{$vo.count}</p>
+                            <if condition="$vo['brand_id'] eq 1">
+                                <p><img src="__PUBLIC__/home/img/wtx-time.png"/><span>{$vo.starttime|mb_substr=0,10,'utf-8'}</span></p>
+                                <elseif condition="$vo['brand_id'] eq 3"/>
+                                <p><img src="__PUBLIC__/home/img/wtx-time.png"/><span>{$vo.time|date='Y-m-d',###}</span></p>
+                            </if>
+
+                        </div>
+                    </div>
+                </li>
+            </a>
+
+        </volist>
+    </ul>
+</div>
+</body>
+
+</html>

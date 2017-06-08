@@ -1,0 +1,200 @@
+﻿<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 文章管理 <span
+        class="c-gray en">&gt;</span> 分类管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+                                              href="javascript:location.replace(location.href);" title="刷新"><i
+        class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c">
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"><span class="l"><a href="javascript:;" onclick="del_all()"
+                                                               class="btn btn-danger radius"><i class="Hui-iconfont">
+        &#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="add()" href="javascript:;"><i
+            class="Hui-iconfont">&#xe600;</i> 添加分类</a></span>
+    </div>
+    <div class="mt-20">
+        <table class="table table-border table-bordered table-hover table-bg table-sort">
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="80">ID</th>
+                <th width="80">排序</th>
+                <th>分类名称</th>
+                <th width="100">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <if condition="$arclist">
+                <foreach name="arclist" item="v">
+                    <tr class="text-c">
+                        <td class="hidden-xs" aid="{$v.type_id}"><input type="checkbox" name="" /></td>
+                        <td>{$v.type_id}</td>
+                        <td>{$v.sort}</td>
+                        <td class="text-l">{$v.type_name}</td>
+                        <td class="f-14">
+                            <a title="编辑" href="javascript:;" onclick="edit({$v.type_id},this)" aid="{$v.type_name}" sort="{$v.sort}" style="text-decoration:none">
+                                <i class="Hui-iconfont">&#xe6df;</i></a>
+                            <a title="删除" href="javascript:;" class="ml-5 del"
+                               style="text-decoration:none" aid="{$v.type_id}">
+                                <i class="Hui-iconfont">&#xe6e2;</i></a>
+                        </td>
+                    </tr>
+                </foreach>
+            </if>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/bootstrap-modal/2.2.4/bootstrap-modal.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/bootstrap-modal/2.2.4/bootstrap-modalmanager.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/bootbox/bootbox.min.js"></script>
+<script type="text/javascript">
+    /*系统-栏目-添加*/
+    function add() {
+        bootbox.dialog({
+            message: '父级分类:{$str}<br/><br/>分类名称:<input type="text"  id="c_name"  class="input-text"/><br/><br/>排序:<input type="text" id="s_name"  class="input-text"/>',
+            title: "添加：",
+            buttons: {
+                success: {
+                    label: "确认",
+                    className: "btn-success",
+                    callback: function () {
+                        pid =$("#pid").val();
+                        name = $('#c_name').val();
+                        sort = $("#s_name").val();
+                        if (name == '' || sort == '') {
+                            bootbox.alert('输入不能为空');
+                            return;
+                        }
+                        $.ajax({
+                            'type': 'post',
+                            data: {type_name: name, sort: sort, pid: pid},
+                            'url': "{:U('Article/addcate')}",
+                            'success': function (dat) {
+                                layer.alert(dat);
+                                location.replace(location.href);
+                            }
+                        });
+
+                    }
+                },
+                danger: {
+                    label: "取消",
+                    className: "btn-danger",
+                    callback: function () {
+
+                    }
+                }
+            }
+        });
+    }
+    /*-编辑*/
+    function edit(id,v){
+        var name=$(v).attr("aid");
+        var sort=$(v).attr("sort");
+        var pid = $("#father").val();
+        var pname = '';
+        pname = pid > 0 ? '{$date.type_name}' : '顶级分类';
+        bootbox.dialog({
+            message: '父级分类:<input type="text"  id="f_name"  class="input-text" value="' + pname + '" disabled="disabled"/><br/><br/>分类名称:<input type="text"  id="c_name"  class="input-text" value="'+name+'"/><br/><br/>排序:<input type="text" id="s_name"  class="input-text" value="'+sort+'"/>',
+            title: "编辑：",
+            buttons: {
+                success: {
+                    label: "确认",
+                    className: "btn-success",
+                    callback: function() {
+                        name=$('#c_name').val();
+                        sort=$('#s_name').val();
+                        if(name=='' || sort==''){
+                            bootbox.alert('输入不能为空');
+                            return ;
+                        }
+                        $.ajax({
+                            'type':'post',
+                            data:{name:name,id:id,sort:sort},
+                            'url':"{:U('Article/editcate')}",
+                            'success':function(dat){
+                                layer.alert(dat);
+                                location.replace(location.href);
+                            }
+                        });
+
+                    }
+                },
+                danger: {
+                    label: "取消",
+                    className: "btn-danger",
+                    callback: function() {
+
+                    }
+                }
+            }
+        });
+    }
+    /*搜索*/
+    $("#sub").click(function(){
+       var keywords=$("#search").val();
+        if(keywords==''){
+            alert("请输入要搜索的内容");return false;
+        }
+
+    });
+    </script>
+<script type="text/javascript">
+         /* 批量删除*/
+    function del_all() {
+        var ids = "";
+        $(".hidden-xs").each(function () {
+            var p = $(this);
+            if (p.children().is(":checked")) {
+                ids += p.attr('aid') + ',';
+            }
+        });
+		if (ids == "") {
+            layer.msg("您什么都没有选择呢",{icon:2});
+            return false
+        };
+		layer.confirm("你确定要全部删除吗？", {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+		$.post('{:U("Article/arc_del")}',{'ids':ids},function(data){
+			if(data.status==1){
+			layer.msg('删除成功！',{icon:1});
+			setTimeout(function () {
+							location.reload();
+						}, 2000);
+                $(".hidden-xs").children().attr("checked",false);
+			}else{
+			layer.msg('删除失败！',{icon:2});
+			}
+			
+			})
+		})
+       
+    }
+    $(".del").click(function() {
+		var id = $(this).attr("aid");
+		//alert(id);
+       layer.confirm("你确定要删除吗？", {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+		$.post('{:U("Article/arcdelete")}',{'id':id},function(data){
+			if(data.status==1){
+			layer.msg('删除成功！',{icon:1});
+			setTimeout(function () {
+							location.reload();
+						}, 2000);
+			}else{
+			layer.msg('删除失败！',{icon:2});
+			}
+			
+			})
+		})
+    });
+</script>

@@ -1,0 +1,112 @@
+[ 2017-03-08T21:26:58+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001289s ]
+SQL: SHOW COLUMNS FROM `lx_system` [ RunTime:0.1175s ]
+SQL: SELECT * FROM `lx_system` ORDER BY id asc  [ RunTime:0.0574s ]
+SQL: SHOW COLUMNS FROM `lx_contact` [ RunTime:0.0591s ]
+SQL: SELECT * FROM `lx_contact` ORDER BY id asc LIMIT 1   [ RunTime:0.0539s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0651s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 1 ) LIMIT 1   [ RunTime:0.0588s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 2 )  [ RunTime:0.0536s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 3 ) LIMIT 1   [ RunTime:0.0535s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 4 ) LIMIT 1   [ RunTime:0.0536s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 5 ) LIMIT 1   [ RunTime:0.0606s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 6 ) LIMIT 1   [ RunTime:0.0557s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 7 ) LIMIT 1   [ RunTime:0.0533s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 8 ) LIMIT 1   [ RunTime:0.0603s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 8 ) LIMIT 1   [ RunTime:0.0602s ]
+NOTIC: [8] Undefined variable: foot_image F:\phpStudy\WWW\ls\Application\Home\Controller\BaseController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `lx_brand` [ RunTime:0.0576s ]
+SQL: SELECT * FROM `lx_brand` ORDER BY sort desc  [ RunTime:0.0553s ]
+SQL: SHOW COLUMNS FROM `lx_bimg` [ RunTime:0.0577s ]
+SQL: SELECT * FROM `lx_bimg` ORDER BY sort desc  [ RunTime:0.0546s ]
+SQL: SHOW COLUMNS FROM `lx_picture` [ RunTime:0.0616s ]
+SQL: SELECT * FROM `lx_picture` ORDER BY id desc  [ RunTime:0.0601s ]
+SQL: SELECT * FROM `lx_contact` WHERE ( id= 1 ) LIMIT 1   [ RunTime:0.3545s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000275s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `lx_seo_rule` [ RunTime:0.0611s ]
+SQL: SELECT * FROM `lx_seo_rule` WHERE ( status="1" )  [ RunTime:0.0584s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 17 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 45 行.
+NOTIC: [8] Use of undefined constant About - assumed 'About' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 46 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 47 行.
+NOTIC: [8] Use of undefined constant Brand - assumed 'Brand' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant Vip - assumed 'Vip' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 49 行.
+NOTIC: [8] Use of undefined constant Join - assumed 'Join' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant Zhao - assumed 'Zhao' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 51 行.
+NOTIC: [8] Use of undefined constant Contact - assumed 'Contact' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.221797s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.221971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001837s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001975s ]
+
+[ 2017-03-08T21:27:09+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002111s ]
+SQL: SHOW COLUMNS FROM `lx_system` [ RunTime:0.0389s ]
+SQL: SELECT * FROM `lx_system` ORDER BY id asc  [ RunTime:0.0356s ]
+SQL: SHOW COLUMNS FROM `lx_contact` [ RunTime:0.0365s ]
+SQL: SELECT * FROM `lx_contact` ORDER BY id asc LIMIT 1   [ RunTime:0.0387s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0368s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 1 ) LIMIT 1   [ RunTime:0.0375s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 2 )  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 3 ) LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 4 ) LIMIT 1   [ RunTime:0.0366s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 5 ) LIMIT 1   [ RunTime:0.0397s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 6 ) LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 7 ) LIMIT 1   [ RunTime:0.0353s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 8 ) LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 8 ) LIMIT 1   [ RunTime:0.0403s ]
+NOTIC: [8] Undefined variable: foot_image F:\phpStudy\WWW\ls\Application\Home\Controller\BaseController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `lx_brand` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `lx_brand` ORDER BY sort desc  [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `lx_bimg` [ RunTime:0.0448s ]
+SQL: SELECT * FROM `lx_bimg` ORDER BY sort desc  [ RunTime:0.0361s ]
+SQL: SHOW COLUMNS FROM `lx_picture` [ RunTime:0.0385s ]
+SQL: SELECT * FROM `lx_picture` ORDER BY id desc  [ RunTime:0.0371s ]
+SQL: SELECT * FROM `lx_contact` WHERE ( id= 1 ) LIMIT 1   [ RunTime:0.0433s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `lx_seo_rule` [ RunTime:0.0389s ]
+SQL: SELECT * FROM `lx_seo_rule` WHERE ( status="1" )  [ RunTime:0.0372s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 17 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 45 行.
+NOTIC: [8] Use of undefined constant About - assumed 'About' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 46 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 47 行.
+NOTIC: [8] Use of undefined constant Brand - assumed 'Brand' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant Vip - assumed 'Vip' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 49 行.
+NOTIC: [8] Use of undefined constant Join - assumed 'Join' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant Zhao - assumed 'Zhao' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 51 行.
+NOTIC: [8] Use of undefined constant Contact - assumed 'Contact' F:\phpStudy\WWW\ls\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.966644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.966750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002569s ]
+
+[ 2017-03-08T21:34:26+08:00 ] 127.0.0.1 /Public/Admin/lib/Hui-iconfont/1.0.1/iconfont.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001433s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-03-08T21:34:40+08:00 ] 127.0.0.1 /Public/Admin/lib/Hui-iconfont/1.0.1/iconfont.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001510s ]
+ERR: 无法加载控制器:Public
+

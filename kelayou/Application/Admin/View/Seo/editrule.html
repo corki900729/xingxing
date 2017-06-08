@@ -1,0 +1,148 @@
+
+
+
+<div class="page-container">
+	<form class="form form-horizontal" id="form-article-add"  onsubmit="return false;">
+	
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">编号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" name="title" id="id" type="text" value="{$rule.id}" readonly>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称（规则名称，方便记忆）：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text"  name="title" id="title" type="text" value="{$rule.title}">
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">模块名称（不填默认home）</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text"  name="app" id="app" type="text" value="{$rule.app}">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>控制器（必填）</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" name="controller" id="controller" type="text" value="{$rule.controller}">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>方法（必填）</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" name="action" id="action" type="text" value="{$rule.action}">
+			</div>
+		</div>
+		
+		
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">SEO标题（不填表示使用下一条规则）</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" name="seo_title" id="seo_title" type="text" value="{$rule.seo_title}">
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">SEO关键字</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" name="seo_keywords" id="seo_keywords" type="text" value="{$rule.seo_keywords}">
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">SEO描述</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" name="seo_description" id="seo_description" type="text" value="{$rule.seo_description}">
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">状态</label>
+			<div class="formControls col-xs-8 col-sm-9" style="margin-top:5px;">
+				<label>
+					启用<input type="radio" name="status" id="status" value="1"   checked>
+				</label>
+				<label>
+					关闭<input type="radio" name="status" id="status" value="0" >
+				</label>
+			</div>
+		</div>
+		
+		
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<button class="btn btn-primary radius" type="submit" id="submit"><i class="Hui-iconfont">&#xe632;</i> 提交</button>
+				
+				<button class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+	
+
+
+<script type="text/javascript">
+
+
+
+	          
+			
+			$('#submit').click(function(){
+			var data=$("#actgoods").serialize();
+			var title=$("#title").val();
+			var id=$("#id").val();
+			var app =$("#app").val();
+			var  controller=$("#controller").val();
+			var action2 =$("#action").val();
+			var  seo_title=$("#seo_title").val();
+			var  seo_keywords=$("#seo_keywords").val();
+			var  seo_description=$("#seo_description").val();
+			var  status=$("#status").val();
+			
+			   $.ajax({
+						type:'post',
+						url: "{:U('Seo/doEditRule')}",
+						data: {id:id,title:title,app:app,controller:controller,action2:action2,seo_title:seo_title,seo_keywords:seo_keywords,seo_description:seo_description,status:status},
+						'dataType':'json',
+						success: function(msg)
+							{
+						
+							if(msg.status==1){
+								layer.msg('设置成功', {icon:1});
+								
+									 setTimeout(function () {
+                        window.location.href = "/index.php/Admin/Seo/index.html";
+                    }, 1500);
+							   }else{
+								layer.msg('设置失败', {icon:2});
+								  
+									 setTimeout(function () {
+                        window.location.href = "/index.php/Admin/Seo/index.html";
+                    }, 1500);
+							   }
+							}
+						}); 
+				
+				
+			})
+		
+
+			
+
+
+
+        
+</script>
+
+
+
+
+
+
+

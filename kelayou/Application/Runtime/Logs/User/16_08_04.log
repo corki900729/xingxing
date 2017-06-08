@@ -1,0 +1,24 @@
+[ 2016-08-04T09:51:50+08:00 ] 123.52.86.38 /User/Index/verify.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `lx_admin` WHERE `name` = 'admin' AND `pwd` = '96e79218965eb72c92a549dd5a330112' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_record` [ RunTime:0.0011s ]
+SQL: INSERT INTO `lx_record` (`admin_id`,`last_login`,`ip`) VALUES ('1','1470275510','123.52.86.38') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000368s ]
+
+[ 2016-08-04T10:48:51+08:00 ] 123.52.86.38 /User/Index/verify.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `lx_admin` WHERE `name` = 'admin' AND `pwd` = '96e79218965eb72c92a549dd5a330112' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_record` [ RunTime:0.0013s ]
+SQL: INSERT INTO `lx_record` (`admin_id`,`last_login`,`ip`) VALUES ('1','1470278931','123.52.86.38') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+

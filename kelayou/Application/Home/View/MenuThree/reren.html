@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>克拉玛依</title>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/whd.css" />
+	</head>
+
+	<body>
+		<div class="container rrph">
+			<ul class="rrph-content">
+				<empty name="list">
+					<li style="align: center"><div style="align: center">暂无排行</div></li>
+
+					<else />
+					<volist name="list" key="i" id="vo">
+						<li>
+							<div class="num">
+								<if condition="$i eq 1">
+									<img src="__PUBLIC__/home/img/one.png"/>
+
+									<elseif condition="$i eq 2"/>
+									<img src="__PUBLIC__/home/img/two.png"/>
+
+									<elseif condition="$i eq 3"/>
+									<img src="__PUBLIC__/home/img/three.png"/>
+
+									<else/>
+									{$i}
+								</if>
+
+							</div>
+							<div class="info">
+								<img src="{$vo.headurl}" class="icon"/>
+								<p class="name">{$vo.nickname}<span>共答对{$vo.count}道题</span></p>
+							</div>
+						</li>
+					</volist>
+				</empty>
+
+
+
+			</ul>
+		</div>
+
+	</body>
+
+</html>

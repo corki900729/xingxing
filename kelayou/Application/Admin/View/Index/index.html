@@ -1,0 +1,240 @@
+<header class="navbar-wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="container-fluid cl"><a class="logo navbar-logo f-l mr-10 hidden-xs" href="{:U('Index/index')}">后台管理系统</a><a
+                aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+            <nav class="nav navbar-nav">
+                <if condition="$module['admin']['add']">
+                    <ul class="cl">
+                        <li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i
+                                class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
+                            <ul class="dropDown-menu menu radius box-shadow">
+                                <!-- <li><a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
+                                <li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
+                                <li><a href="javascript:;" onclick="product_add('添加资讯','product-add.html')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li> -->
+                                <li><a href="javascript:;"
+                                       onclick="member_add('添加管理员', '{:U('Index/member_add')}', '', '510')"><i
+                                        class="Hui-iconfont">&#xe60d;</i>管理员</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </if>
+            </nav>
+            <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
+                <ul class="cl">
+
+                    <li>
+                        <if condition="$admin_info['power'] eq 1">超级管理员
+                            <else/>
+                            普通管理员
+                        </if>
+                    </li>
+                    <li class="dropDown dropDown_hover"><a href="#" class="dropDown_A">{$admin_info.name} <i
+                            class="Hui-iconfont">&#xe6d5;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <!-- <li><a href="#">个人信息</a></li>
+                            <li><a href="#">切换账户</a></li> -->
+                            <li><a href="{:U('Users/out')}">退出</a></li>
+                        </ul>
+                    </li>
+                    <if condition="array_key_exists('message',$module)">
+                        <li id="Hui-msg"><a href="{:U('Comment/feedback_list')}" title="消息">
+                            <if condition="$comment_num"><span class="badge badge-danger">{$comment_num}</span></if>
+                            <i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a></li>
+                    </if>
+                    <li id="Hui-skin" class="dropDown right dropDown_hover"><a href="javascript:;" class="dropDown_A"
+                                                                               title="换肤"><i class="Hui-iconfont"
+                                                                                             style="font-size:18px">
+                        &#xe62a;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a></li>
+                            <li><a href="javascript:;" data-val="blue" title="蓝色">蓝色</a></li>
+                            <li><a href="javascript:;" data-val="green" title="绿色">绿色</a></li>
+                            <li><a href="javascript:;" data-val="red" title="红色">红色</a></li>
+                            <li><a href="javascript:;" data-val="yellow" title="黄色">黄色</a></li>
+                            <li><a href="javascript:;" data-val="orange" title="绿色">橙色</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<aside class="Hui-aside">
+    <input runat="server" id="divScrollValue" type="hidden" value=""/>
+    <div class="menu_dropdown bk_2">
+        <if condition="array_key_exists('config',$module)">
+            <dl id="menu-system">
+                <dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+                </dt>
+                <dd>
+                    <ul>
+                        <li><a _href="{:U('Sys/index')}" data-title="系统设置" href="javascript:void(0)">系统设置</a></li>
+                        <li><a _href="{:U('/Home/Wechat/creatMenus')}" data-title="更新微信菜单" href="javascript:void(0)">更新微信菜单</a></li>
+                        <li><a _href="{:U('Users/admin_log')}" data-title="系统日志" href="javascript:void(0)">系统日志</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </if>
+        <if condition="array_key_exists('admin',$module)">
+            <dl id="menu-admin">
+                <dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+                </dt>
+                <dd>
+                    <ul>
+                        <li><a _href="{:U('Users/admin_list')}" data-title="管理员列表" href="javascript:void(0)">管理员列表</a>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <if>
+                <if condition="array_key_exists('ads',$module)">
+                    <dl id="menu-product">
+                        <dt><i class="Hui-iconfont">&#xe620;</i> 背景图管理<i class="Hui-iconfont menu_dropdown-arrow">
+                            &#xe6d5;</i></dt>
+                        <dd>
+                            <ul>
+                                <li><a _href="{:U('Ads/position')}" data-title="背景图位置"
+                                       href="javascript:void(0)">背景图位置</a></li>
+                                <!--<li><a _href="{:U('Ads/add')}" data-title="背景图添加" href="javascript:void(0)">背景图添加</a></li>-->
+                                <li><a _href="{:U('Ads/index')}" data-title="背景图列表" href="javascript:void(0)">背景图列表</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </if>
+
+
+                <dl id="menu-admin">
+                    <dt><i class="Hui-iconfont">&#xe613;</i> {$data['menus1']['value']}管理<i
+                            class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                    <dd>
+                        <ul>
+                            <li><a _href="{:U('Brand/index')}" data-title="菜单列表" href="javascript:void(0)">菜单列表</a>
+                            </li>
+                            <li><a _href="{:U('Brand/shop')}" data-title="文章管理" href="javascript:void(0)">文章管理</a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+
+                <dl id="menu-admin">
+                    <dt><i class="Hui-iconfont">&#xe613;</i> {$data['menus2']['value']}管理<i
+                            class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                    <dd>
+                        <ul>
+                            <li><a _href="{:U('Join/index')}" data-title="菜单列表" href="javascript:void(0)">菜单列表</a></li>
+                            <li><a _href="{:U('Join/shop')}" data-title="文章管理" href="javascript:void(0)">科学文艺文章</a></li>
+                            <li><a _href="{:U('Join/dati')}" data-title="答题管理" href="javascript:void(0)">答题管理</a></li>
+                            <li><a _href="{:U('Join/shop2')}" data-title="答题管理" href="javascript:void(0)">活动资讯管理</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+
+                <dl id="menu-admin">
+                    <dt><i class="Hui-iconfont">&#xe613;</i> {$data['menus3']['value']}管理<i
+                            class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                    <dd>
+                        <ul>
+                            <li><a _href="{:U('vip/index')}" data-title="菜单列表" href="javascript:void(0)">菜单列表</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+
+                <if condition="array_key_exists('message',$module)">
+                    <dl id="menu-comments">
+                        <dt><i class="Hui-iconfont">&#xe622;</i> 报名管理<i class="Hui-iconfont menu_dropdown-arrow">
+                            &#xe6d5;</i></dt>
+                        <dd>
+                            <ul>
+                                <li><a _href="{:U('Comment/feedback_list')}" data-title="报名列表"
+                                       href="javascript:void(0)">报名列表</a></li>
+                                <li><a _href="{:U('Comment/feedback_list2')}" data-title="互动列表"
+                                       href="javascript:void(0)">互动列表</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </if>
+
+                    <dl id="menu-tongji">
+                        <dt><i class="Hui-iconfont">&#xe61a;</i> 数据库备份<i class="Hui-iconfont menu_dropdown-arrow">
+                            &#xe6d5;</i></dt>
+                        <dd>
+                            <ul>
+                                <li><a _href="{:U('Dat/index')}" data-title="数据库列表" href="javascript:void(0)">数据库列表</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+    </div>
+</aside>
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a>
+</div>
+<section class="Hui-article-box">
+    <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+        <div class="Hui-tabNav-wp">
+            <ul id="min_title_list" class="acrossTab cl">
+                <li class="active"><span title="我的桌面" data-href="{:U('Index/welcome')}">我的桌面</span><em></em></li>
+            </ul>
+        </div>
+        <div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S"
+                                                  href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a
+                id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">
+            &#xe6d7;</i></a></div>
+    </div>
+    <div id="iframe_box" class="Hui-article">
+        <div class="show_iframe">
+            <div style="display:none" class="loading"></div>
+            <iframe scrolling="yes" frameborder="0" src="{:U('Index/welcome')}"></iframe>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    /*资讯-添加*/
+    function article_add(title, url) {
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+    /*图片-添加*/
+    function picture_add(title, url) {
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+    /*产品-添加*/
+    function product_add(title, url) {
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+    /*用户-添加*/
+    function member_add(title, url, w, h) {
+        layer_show(title, url, w, h);
+    }
+    /*function member_add(){
+     location.href="{:U('Index/add')}";
+     }*/
+
+
+</script>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)
+    })();
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+</script>

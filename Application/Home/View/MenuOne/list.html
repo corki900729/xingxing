@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>克拉玛依</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/whd.css" />
+</head>
+
+<body>
+<div class="container qykj" style="background: #EEEEEE;">
+    <ul>
+        <volist name="list" id="vo">
+            <li>
+                <a href="{:U('MenuOne/info',array('id'=>$vo['id']))}">
+                    <div class="img">
+                        <img src="{$vo.img}"/>
+                        <span></span>
+                    </div>
+                    <div class="title">
+                        <p>{$vo.name}</p>
+                        <p>{$vo.address}</p>
+                    </div>
+                </a>
+            </li>
+        </volist>
+    </ul>
+</div>
+</body>
+
+</html>

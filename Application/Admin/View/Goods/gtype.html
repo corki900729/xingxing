@@ -1,0 +1,95 @@
+
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统管理 <span class="c-gray en">&gt;</span> 商品分类管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<div class="cl pd-5 bg-1 bk-gray mt-20">
+		<span class="l">
+			<if condition="$module['product']['del']">
+			<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
+			</if>
+			<if condition="$module['product']['add']">
+			<a href="{:U('Goods/gtype_add')}" class="btn btn-primary radius"><i class="Hui-iconfont"></i> 添加分类</a>
+			</if>
+		</span>
+	</div>
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-hover table-bg table-sort">
+			<thead>
+				<tr class="text-c">
+					<th width="25"><input type="checkbox" name="" value=""></th>
+					<th width="80">ID</th>
+					<th width="80">名称</th>
+					<th width="80">排序</th>
+					<th width="100">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			<volist name="data" id="v">
+				<tr class="text-c">
+					<td class="hidden-xs" id="{$v.id}"><input type="checkbox" name="" value=""></td>
+					<td>{$v.id}</td>
+					<td class="text-l">{$v.gtype}</td>
+					<td>{$v.sort}</td>
+					<td class="f-14">
+					<if condition="$module['product']['edit']">
+					<a href="{:U('Goods/gtype_edit',array('id'=>$v['id']))}" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> 
+					</if>
+					<if condition="$module['product']['del']">
+					<a href="javascript:;" onclick="gtype_del(this,{$v.id})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+					</if>
+					</td>
+				</tr>
+			</volist>
+			</tbody>
+		</table>
+	</div>
+</div>
+<script type="text/javascript">
+/*系统-栏目-删除*/
+function gtype_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$.post("{:U('Goods/gtype_del')}",{'id':id},function(data){
+			if(data.status==1){
+				//$(obj).parents("tr").remove();
+				layer.msg('已删除!',{icon:1,time:1000});
+				window.location.reload();
+			}
+		});
+		
+	});
+}
+
+//批量删除
+	 function datadel() {
+        var ids = "";
+        $(".hidden-xs").each(function () {
+            var p = $(this);
+            if (p.children().is(":checked")) {
+                ids += p.attr('id') + ',';
+            }
+        });
+		if (ids == "") {
+            layer.msg("您什么都没有选择呢",{icon:2});
+            return false
+        };
+		layer.confirm("你确定要全部删除吗？", {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+		$.post('{:U("Goods/gtype_delall")}',{'ids':ids},function(data){
+			if(data.status==1){
+			layer.msg('删除成功！',{icon:1});
+			setTimeout(function () {
+							location.reload();
+				$(".hidden-xs").children().attr("checked",false);
+						}, 2000);
+			}else{
+			layer.msg('删除失败！',{icon:2});
+			}
+			
+			})
+		})
+       
+    }
+
+
+
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>克拉玛依</title>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/whd.css" />
+	</head>
+
+	<body>
+		<div class="container kpjd" style="background: #F0F0F0;">
+			<ul>
+				<volist name="list" id="vo">
+					<a href="{:U('MenuTwo/dati_info',array('id'=>$vo['id']))}">
+						<li>
+							<p class="title">{$vo.title}</p>
+							<div class="dtph">
+								<div class="dtph-lead">
+									<p style="width: 15%;">排行</p>
+									<p style="width: 35%;">参赛者</p>
+									<p style="width: 25%;">成绩</p>
+									<!--<p style="width: 25%;">用时</p>-->
+								</div>
+								<table border="0" cellspacing="" cellpadding="" bgcolor="#f0f0f0">
+									<empty name="vo['daan']">
+										<tr>
+											<td colspan="3">还没有人答对，赶快去答题吧！</td>
+										</tr>
+										<else />
+										<volist name="vo['daan']" id="voo" key="i" offset="0" length="5">
+											<tr>
+												<td width="15%">{$i}</td>
+												<td width="30%">{$voo['nickname']}</td>
+												<td width="25%">答对{$voo['dui_count']}题</td>
+												<!--<td width="25%">2'30''</td>-->
+											</tr>
+										</volist>
+
+									</empty>
+
+
+								</table>
+							</div>
+							<div class="answer">
+								<p>回答：<span>{$vo.sum}</span></p>
+								<p><img src="__PUBLIC__/home/img/see.png" /><span>{$vo.count}</span></p>
+							</div>
+						</li>
+					</a>
+				</volist>
+
+			</ul>
+			<a href="hd-wyct.html" class="question">+我要出题</p>
+		</div>
+		<div class="paginate" style="font-size:16px;text-align: center;">{$page}</div>
+	</body>
+
+</html>

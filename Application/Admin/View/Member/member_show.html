@@ -1,0 +1,30 @@
+
+<div class="cl pd-20" style=" background-color:#5bacb6">
+  <img class="avatar size-XL l" src="static/h-ui/images/user.png">
+  <dl style="margin-left:80px; color:#fff">
+    <dt><span class="f-18">{$user_info.name}</span></dt>
+    <dd class="pt-10 f-12" style="margin-left:0">{$user_info.qianming}</dd>
+  </dl>
+</div>
+<div class="pd-20">
+  <table class="table">
+    <tbody>
+      <tr>
+        <th class="text-r" width="80">性别：</th>
+        <td><if condition="$user_info.sex eq 1">男<elseif condition="$user_info.sex eq 2"/>女<else/>保密</if></td>
+      </tr>
+      <tr>
+        <th class="text-r">手机：</th>
+        <td>{$user_info.phone}</td>
+      </tr>
+      <tr>
+        <th class="text-r">邮箱：</th>
+        <td>{$user_info.email}</td>
+      </tr>
+      <tr>
+        <th class="text-r">注册时间：</th>
+        <td>{$user_info.add_time|date="Y-m-d H:i:s",###}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

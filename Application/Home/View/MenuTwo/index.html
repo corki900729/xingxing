@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>克拉玛依</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/whd.css"/>
+</head>
+<style>
+    background:
+
+    url
+    (
+    '{$data["menu1_ads"]["image"]}'
+    )
+    ;
+</style>
+<body>
+<div class="container wzl-content">
+    <ul class="whd-content">
+        <volist name="data['list']" id="vo">
+            <li>
+                <if condition="$vo['id'] neq 2">
+                    <a href="{:U('MenuTwo/list',array('id'=>$vo['id']))}">
+                        <else/>
+                    <a href="{:U('MenuTwo/dati_list',array('id'=>$vo['id']))}">
+
+                </if>
+                <div class="title">
+                    <img src="{$vo.logo}"/>
+                    <p>{$vo.name}</p>
+                </div>
+                <if condition="$vo['id'] eq 1">
+                    <img src="__PUBLIC__/home/img/blue.png" class="hover"/>
+
+                    <elseif condition="$vo['id'] eq 2"/>
+                    <img src="__PUBLIC__/home/img/yellow.png" class="hover"/>
+
+                    <elseif condition="$vo['id'] eq 3"/>
+                    <img src="__PUBLIC__/home/img/orgle.png" class="hover"/>
+                </if>
+
+                    </a>
+            </li>
+        </volist>
+    </ul>
+    <div class="href">{$foot.value}</div>
+</div>
+
+</body>
+
+</html>

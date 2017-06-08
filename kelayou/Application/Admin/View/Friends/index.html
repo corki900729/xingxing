@@ -1,0 +1,124 @@
+
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 友情链接管理 <span class="c-gray en">&gt;</span> 友情链接列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><!-- <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --> 
+	<if condition="$module['friends']['add']">
+	<a class="btn btn-primary radius" onclick="picture_add('添加友情链接','{:U('Friends/add')}')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加友情链接</a>
+	</if>
+	</span> </div>
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-bg table-hover table-sort">
+			<thead>
+				<tr class="text-c">
+					<th width="50"><input name="" type="checkbox" value=""></th>
+					<th width="80">序号</th>
+					<th width="200">友情链接</th>
+					<th width="150">图片</th>
+					<th width="50">点击量</th>
+					<th width="100">链接地址</th>
+					<th width="150">发布时间</th>
+					<th width="60">排序</th> 
+				    <th width="60">状态</th> 
+					<th width="100">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			<volist name="friends" id="v">
+ 				<tr class="text-c">
+					<td><input name="" type="checkbox" value=""></td>
+					<td>{$v.id}</td>
+					<td>{$v.title}</td>
+					<td><img width="100" height="66" src="{$v.image}"/></td>
+					<td>{$v.click}</td>
+					<td>{$v.link_url}</td>
+					<td><php>echo date('Y-m-d H:i:s',$v['ptime'])</php></td>
+					<td>{$v.sort}</td>
+					<td>
+					 <if condition="$v.status eq 1">
+                        <img style="cursor:pointer" id="t-{$v.id}" onclick="kaiqi(this,'{$v.id}');" src="__PUBLIC__/admin/images/error.png" width="15"/>
+                    <else/>
+                        <img style="cursor:pointer" id="t-{$v.id}" onclick="guanbi(this,'{$v.id}');" src="__PUBLIC__/admin/images/right.png" width="15"/>
+                    </if>
+					</td>
+					<td class="td-manage">
+					<if condition="$module['friends']['edit']">
+					<a style="text-decoration:none" class="ml-5" onClick="picture_edit('友情链接编辑','{:U('Friends/update',array('id'=>$v['id']))}','{$v.id}')" href="javascript:;" title="友情链接编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+					</if>
+					<if condition="$module['friends']['del']">
+					<a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'{$v.id}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+					</if>
+					</td>
+				</tr>
+			</volist>
+			</tbody>
+			
+		</table>
+		<br>
+		<div class="paginate" style="float:right;">{$page}</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+function picture_add(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+	/*图片-编辑*/
+	function picture_edit(title,url,id){
+		var index = layer.open({
+			type: 2,
+			title: title,
+			content: url
+		});
+		layer.full(index);
+	}
+	/*图片-删除*/
+	function picture_del(obj,id){
+		layer.confirm('确认要删除吗？',function(index){
+			$.post( "{:U('Friends/delete')}",{'id':id},function(data){
+				if(data.status==1){
+					$(obj).parents("tr").remove();
+					layer.msg('已删除!',{icon:1,time:1000});
+				}else{
+					layer.msg('删除失败!',{icon:2,time:1000});
+				}
+			})
+
+		});
+	}
+
+	//广告关闭
+
+	function guanbi(obj,id){
+
+		$.post("{:U('Friends/guanbi')}",{'id':id},function(data){
+			if(data.status==1){
+				var src="__PUBLIC__/admin/images/error.png";
+				location.reload()
+				$("#t-"+id).attr('src',src);
+			}
+		});
+
+
+	}
+
+	//广告开启
+	function kaiqi(obj,id){
+		$.post("{:U('Friends/kaiqi')}",{'id':id},function(data){
+			if(data.status==1){
+				var src="__PUBLIC__/admin/images/right.png";
+				location.reload()
+				$("#t-"+id).attr('src',src);
+			}
+		});
+
+
+	}
+</script>
+</body>
+</html>

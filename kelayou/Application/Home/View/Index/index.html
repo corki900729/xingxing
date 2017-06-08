@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .content {
+        background: url('{$data["index_ads"]["image"]}')
+    }
+</style>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>克拉玛依</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/index.css"/>
+</head>
+
+<body>
+<div class="content container">
+    <div class="content-bottom">
+        <ul>
+            <volist name="data['menus']" id="vo">
+
+                <if condition="$vo['id'] eq 4">
+                    <li>
+                        <a href="{:U('MenuOne/index')}">
+                            <div class="title">
+                                <img src="__PUBLIC__/home/img//icon-img.png"/>
+                                <p>{$vo.value}</p>
+                            </div>
+                            <img src="__PUBLIC__/home/img//hover.png" class="hover"/>
+                        </a>
+                    </li>
+                    <elseif condition="$vo['id'] eq 5"/>
+                    <li>
+                        <a href="{:U('MenuTwo/index')}">
+                            <div class="title">
+                                <img src="__PUBLIC__/home/img//icon-img2.png"/>
+                                <p>{$vo.value}</p>
+                            </div>
+                            <img src="__PUBLIC__/home/img//hover-yellow.png" class="hover"/>
+                        </a>
+                    </li>
+                    <elseif condition="$vo['id'] eq 6"/>
+                    <li>
+                        <a href="{:U('MenuThree/index')}">
+                            <div class="title">
+                                <img src="__PUBLIC__/home/img//icon-img4.png"/>
+                                <p>{$vo.value}</p>
+                            </div>
+                            <img src="__PUBLIC__/home/img//hover-green.png" class="hover"/>
+                        </a>
+                    </li>
+                </if>
+
+            </volist>
+        </ul>
+    </div>
+    <div class="href">{$foot.value}</div>
+</div>
+</body>
+
+</html>

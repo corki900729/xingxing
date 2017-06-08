@@ -1,0 +1,107 @@
+﻿
+<title>报名管理</title>
+
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 报名管理 <span class="c-gray en">&gt;</span> 互动列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	
+
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
+	<if condition="$module['message']['del']">
+	<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
+	</if>
+	</span> <span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-hover table-bg table-sort">
+			<thead>
+				<tr class="text-c">
+					<th width="25"><input type="checkbox" name="" value=""></th>
+					<th width="60">序号</th>
+					<th width="60">微信昵称</th>
+					<th width="60">头像</th>
+					<th width="60">标题</th>
+					<th width="150">时间</th>
+					<th width="60">状态</th>
+					<th width="100">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			<volist name="comment" id="vo" ket='i'>
+				<tr class="text-c">
+					<td class="hidden-xs" aid="{$vo.id}"><input type="checkbox" aid="{$vo.id}"></td>
+					<td>{$i}</td>
+					<td>{$vo.nickname}</td>
+					<td><img style="width: 80px;height:80px;" src="{$vo.headurl}" alt=""></td>
+					<td>{$vo.username}</td>
+                    <td>{$vo.c_time|date='Y-m-d',###}</td>
+					<td>
+						<if condition="$vo.status eq 0">
+							未读
+							<else/>
+							已读
+						</if>
+					</td>
+                                                
+					<td class="td-manage">
+					<if condition="$module['message']['edit']">
+					<a title="编辑" href="javascript:;" onclick="member_edit('查看','{:U("Comment/shenhe",array('id'=>$vo['id']))}','4','','510')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+					</if>
+					<if condition="$module['message']['del']">
+					<a title="删除"  href="{:U('Comment/delete',array('id'=>$vo['id']))}" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+					</if>
+					</td>
+				</tr>
+				</volist>
+				
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<div class="paginate" style="float:right;">{$page}</div>
+
+</div>
+<script type="text/javascript" src="__PUBLIC__/Admin/lib/laypage/1.2/laypage.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript">
+
+/*用户-编辑*/
+function member_edit(title,url,id,w,h){
+	layer_show(title,url,w,h);
+}
+
+
+/* 批量删除*/
+    function datadel() {
+        var ids = "";
+        $(".hidden-xs").each(function () {
+            var p = $(this);
+            if (p.children().is(":checked")) {
+                ids += p.attr('aid') + ',';
+            }
+        });
+		if (ids == "") {
+            layer.msg("您什么都没有选择呢",{icon:2});
+            return false
+        };
+		layer.confirm("你确定要全部删除吗？", {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+		$.post('{:U("Comment/deleteall")}',{'ids':ids},function(data){
+			if(data.status==1){
+			layer.msg('删除成功！',{icon:1});
+			setTimeout(function () {
+							location.reload();
+						}, 2000);
+				$(".hidden-xs").children().attr("checked",false);
+			}else{
+			layer.msg('删除失败！',{icon:2});
+			}
+			
+			})
+		})
+       
+    }
+    
+
+</script>
+

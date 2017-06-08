@@ -1,0 +1,117 @@
+<div class="page-container">
+	<div class="tabBar cl"><span>属性添加</span></div>
+	<form class="form form-horizontal" id="form-article-add" action="{:U('Goods/gattr')}" method="post" enctype="multipart/form-data">
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>属性类型：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<span class="select-box">
+				<select name="attr_id" class="select" required>
+				<volist name="attr" id="v">
+ 					<option value="{$v.id}" class="input-text">{$v.attr}</option>
+				</volist>
+				</select>
+				</span>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">属性值：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<input type="text" class="input-text" value="" placeholder="" id="value" name="value">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">排序：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<input type="text" class="input-text" value="" placeholder="" id="sort" name="sort">
+			</div>
+		</div>
+		
+		<input type="hidden" name="gid" value="{$gid}"/>
+		
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<button class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 添加</button>
+				
+				<a class="btn btn-succcess radius" href="{:U('Goods/glist')}"><i class="Hui-iconfont">&#xe632;</i>返回列表</a>
+			</div>
+		</div>
+	</form>
+	<br>
+	
+	
+	
+							<div class="form-group">
+								<div class="col-sm-3" style="margin-left: 248px;width:800px">
+									<table style="width:800px" class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>属性名称</th>
+												<th>属性值</th>
+												<th>排序</th>
+												<th>发布时间</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody class="middle-align">		
+											<volist name="gattr" id="v">
+											<tr><input type="hidden" name="id" value="{$v.id}">
+												<td>
+												<select style="width:100px" id="goods_attr-{$v.id}">
+												<option value="{$v.attr_id}">{$v.attr_id|get_attr}</option>
+												<volist name="attr" id="vo">
+													<option value="{$vo.id}">{$vo.attr}</option>
+												</volist>
+												</select>
+												</td>
+												
+												<td><input style="width:100px" type="text" id="extra_price-{$v.id}" value="{$v.value}"></td>
+												<td><input style="width:100px" type="text" id="extra_sort-{$v.id}" value="{$v.sort}"></td>
+												<td><php>echo date('Y-m-d H:i:s',$v['ptime'])</php></td>
+												<td>
+													<a class="btn btn-danger btn-sm btn-icon icon-left" onclick="edit({$v.id})">
+														修改
+													</a>
+													<a class="btn btn-danger btn-sm btn-icon icon-left" onclick="del({$v.id})">
+														删除
+													</a>
+												</td>
+											</tr>
+											</volist>							
+										</tbody>
+									</table>
+								</div>
+							</div>
+</div>
+</div>
+
+
+<script>
+	
+	function edit(id){
+		var attr_id=$("#goods_attr-"+id).val();
+		var value=$("#extra_price-"+id).val();
+		var sort=$("#extra_sort-"+id).val();
+		$.post("{:U('Goods/attr_edit')}",{'id':id,'attr_id':attr_id,'value':value,'sort':sort},function(data){
+			if(data.status==1){
+				layer.msg('修改成功',{icon:1});
+				window.location.reload();
+			}else{
+				layer.msg('修改失败',{icon:2});
+			}
+		})
+	}
+	function del(id){
+		$.post("{:U('Goods/attr_del')}",{'id':id},function(data){
+			if(data.status==1){
+				layer.msg('删除成功',{icon:1});
+				window.location.reload();
+			}else{
+				layer.msg('删除失败',{icon:2});
+			}
+		});
+	}
+</script>
+
+
+

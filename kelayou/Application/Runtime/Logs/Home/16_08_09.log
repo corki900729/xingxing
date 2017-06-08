@@ -1,0 +1,98 @@
+[ 2016-08-09T09:59:40+08:00 ] 123.52.87.26 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004451s ]
+SQL: SHOW COLUMNS FROM `lx_system` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `lx_system` ORDER BY id asc  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `lx_contact` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `lx_contact` ORDER BY id asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 1 ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 2 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 3 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 4 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 5 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 6 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 8 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 8 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: foot_image /alidata/www/work/hkp/09/Application/Home/Controller/BaseController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `lx_brand` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `lx_brand` ORDER BY sort desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_bimg` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `lx_bimg` ORDER BY sort desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_picture` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lx_picture` ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lx_contact` WHERE ( id= 1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+SQL: SHOW COLUMNS FROM `lx_seo_rule` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `lx_seo_rule` WHERE ( status="1" )  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 17 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 45 行.
+NOTIC: [8] Use of undefined constant About - assumed 'About' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 46 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 47 行.
+NOTIC: [8] Use of undefined constant Brand - assumed 'Brand' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant Vip - assumed 'Vip' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 49 行.
+NOTIC: [8] Use of undefined constant Join - assumed 'Join' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant Zhao - assumed 'Zhao' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 51 行.
+NOTIC: [8] Use of undefined constant Contact - assumed 'Contact' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.123487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.123556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000910s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2016-08-09T09:59:44+08:00 ] 123.52.87.26 /About/about.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `lx_system` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `lx_system` ORDER BY id asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_contact` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `lx_contact` ORDER BY id asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 2 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 3 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 4 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 5 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 6 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 8 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( pid = 8 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: foot_image /alidata/www/work/hkp/09/Application/Home/Controller/BaseController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_aboutlc` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `lx_aboutlc` ORDER BY year desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+SQL: SHOW COLUMNS FROM `lx_seo_rule` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `lx_seo_rule` WHERE ( status="1" )  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 17 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 45 行.
+NOTIC: [8] Use of undefined constant About - assumed 'About' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 46 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 47 行.
+NOTIC: [8] Use of undefined constant Brand - assumed 'Brand' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 48 行.
+NOTIC: [8] Use of undefined constant Vip - assumed 'Vip' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 49 行.
+NOTIC: [8] Use of undefined constant Join - assumed 'Join' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 50 行.
+NOTIC: [8] Use of undefined constant Zhao - assumed 'Zhao' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 51 行.
+NOTIC: [8] Use of undefined constant Contact - assumed 'Contact' /alidata/www/work/hkp/09/Application/Runtime/Cache/Home/4bf4e1e3af3889722eec884187d3bbbd.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+

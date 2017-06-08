@@ -1,0 +1,67 @@
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 模型管理 <span class="c-gray en">&gt;</span> 字段列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
+	<a class="btn btn-primary radius" data-title="添加字段" href="{:U('add',array('tname'=>$_GET['tname']))}"><i class="Hui-iconfont">&#xe600;</i> 添加字段</a>
+	
+	</span> </div>
+    <div class="mt-20">
+        <table class="table table-border table-bordered table-bg table-hover table-sort" >
+            <thead>
+            <tr class="text-c">
+                <th width="80">排序</th>
+                <th width="80">字段名</th>
+                <th width="80">注释</th>
+                <th width="80">不是null</th>
+                <th width="80">主键</th>
+                <th width="80">类型</th>
+                <th width="80">默认值</th>
+                <!--<th width="120">管理操作</th>-->
+                <!--<th width="75">浏览次数</th>
+                <th width="120">操作</th>-->
+            </tr>
+            </thead>
+            <tbody>
+            <foreach name="data" item="v">
+            <tr class="text-c">
+                <td>{$v.ORDINAL_POSITION}</td>
+                <td>{$v.COLUMN_NAME}</td>
+                <td>{$v.COLUMN_COMMENT}</td>
+                <td>
+	                <if condition="$v['IS_NULLABLE'] eq 'NO'">
+		                <i class="Hui-iconfont">&#xe6a7;</i>
+		                <else/>
+		                <i class="Hui-iconfont">&#xe6a6;</i>
+		            </if>
+                </td>
+                <td>
+	                <if condition="$v['COLUMN_KEY'] eq 'PRI'">
+		               <i class="Hui-iconfont">&#xe6a7;</i>
+		            </if>
+                </td>
+                <td>{$v.COLUMN_TYPE}</td>
+                <td>{$v.COLUMN_DEFAULT}</td>
+                <!--<td>{$v.TABLE_ROWS}</td>
+                <td>{$v.CREATE_TIME}</td>
+                <td>{$v.UPDATE_TIME}</td>-->
+               
+            </tr>
+            </foreach>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+<script type="text/javascript">
+
+</script>
+
+<script type="text/javascript" src="__PUBLIC__/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
+
+<script type="text/javascript">
+
+</script>

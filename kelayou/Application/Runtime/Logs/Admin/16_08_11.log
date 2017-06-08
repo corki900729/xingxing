@@ -1,0 +1,1275 @@
+[ 2016-08-11T17:28:42+08:00 ] 222.137.196.2 /index.php/Admin/Index/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_admin` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_comment` [ RunTime:0.0359s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_comment` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2016-08-11T17:28:42+08:00 ] 222.137.196.2 /Admin/Index/welcome.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_record` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_record` WHERE ( admin_id = '1' && last_login > 0 ) LIMIT 1   [ RunTime:0.0184s ]
+SQL: SELECT * FROM `lx_record` WHERE ( admin_id = '1' && last_login>1 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.132796s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2016-08-11T17:28:46+08:00 ] 222.137.196.2 /Admin/picture/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_picture` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_picture` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_picture` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000411s ]
+
+[ 2016-08-11T17:28:49+08:00 ] 222.137.196.2 /Admin/About/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/66dc9bed425dcf808e9142606813d78c.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008906s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000362s ]
+
+[ 2016-08-11T17:28:54+08:00 ] 222.137.196.2 /Admin/About/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0016s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/66dc9bed425dcf808e9142606813d78c.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000351s ]
+
+[ 2016-08-11T17:28:55+08:00 ] 222.137.196.2 /Admin/About/licheng.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0015s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `lx_aboutlc` [ RunTime:0.0208s ]
+SQL: SELECT * FROM `lx_aboutlc` ORDER BY year desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/b69d86ae1e9c208e6fd9a3f62fe49e3c.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000379s ]
+
+[ 2016-08-11T17:28:56+08:00 ] 222.137.196.2 /Admin/About/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0019s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/66dc9bed425dcf808e9142606813d78c.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006960s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2016-08-11T17:29:47+08:00 ] 222.137.196.2 /Admin/About/editAbout/id/5.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077553s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2016-08-11T17:30:04+08:00 ] 222.137.196.2 /Admin/About/editAbout.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /alidata/www/work/hkp/09/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+SQL: UPDATE `lx_about` SET `id`='5',`name`='价值观',`mname`='value',`sort`='1',`introduce`='健康透明；创新务实；协作竞争；简单与追求卓越！',`mintroduce`='Transparent and healthy; innovative and practical; collaborative competition; simplicity and the pursuit of excellence!',`image`='/Uploads/about_img/2016-08-11/57ac459ca71e1.jpg' WHERE ( id=5 ) [ RunTime:0.0095s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000375s ]
+
+[ 2016-08-11T17:30:05+08:00 ] 222.137.196.2 /Admin/About/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/66dc9bed425dcf808e9142606813d78c.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007150s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-08-11T17:38:46+08:00 ] 222.137.196.2 /Admin/About/editAbout/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0018s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000343s ]
+
+[ 2016-08-11T17:38:59+08:00 ] 222.137.196.2 /Admin/About/editAbout.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0015s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0010s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /alidata/www/work/hkp/09/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+SQL: UPDATE `lx_about` SET `id`='2',`name`='经营宗旨',`mname`=' Management tenet',`sort`='3',`introduce`='让更多的人更自信！',`mintroduce`='Let more people more confident！',`image`='/Uploads/about_img/2016-08-11/57ac47b384312.png' WHERE ( id=2 ) [ RunTime:0.0092s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2016-08-11T17:39:00+08:00 ] 222.137.196.2 /Admin/About/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0017s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/66dc9bed425dcf808e9142606813d78c.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007237s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2016-08-11T17:40:00+08:00 ] 222.137.196.2 /Admin/About/editAbout/id/4.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018447s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2016-08-11T17:40:07+08:00 ] 222.137.196.2 /Admin/About/editAbout.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0013s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /alidata/www/work/hkp/09/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+SQL: UPDATE `lx_about` SET `id`='4',`name`='经营中倡导',`mname`=' Advocacy',`sort`='2',`introduce`='专业化，规范化！',`mintroduce`='Professional and standardization！',`image`='/Uploads/about_img/2016-08-11/57ac47f7e055e.png' WHERE ( id=4 ) [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000368s ]
+
+[ 2016-08-11T17:40:09+08:00 ] 222.137.196.2 /Admin/About/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0013s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/66dc9bed425dcf808e9142606813d78c.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000334s ]
+
+[ 2016-08-11T17:43:03+08:00 ] 222.137.196.2 /Admin/About/licheng.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0013s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `lx_aboutlc` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `lx_aboutlc` ORDER BY year desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/b69d86ae1e9c208e6fd9a3f62fe49e3c.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2016-08-11T17:43:06+08:00 ] 222.137.196.2 /Admin/About/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/66dc9bed425dcf808e9142606813d78c.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006989s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000307s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2016-08-11T17:43:10+08:00 ] 222.137.196.2 /Admin/About/licheng.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `lx_aboutlc` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_aboutlc` ORDER BY year desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/b69d86ae1e9c208e6fd9a3f62fe49e3c.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2016-08-11T17:43:19+08:00 ] 222.137.196.2 /Admin/Brand/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0015s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_brand` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_brand` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: parameter /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 21 行.
+SQL: SELECT * FROM `lx_brand` ORDER BY sort desc LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2016-08-11T17:43:21+08:00 ] 222.137.196.2 /Admin/Brand/img.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0018s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_brand` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `lx_bimg` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: where /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 188 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_bimg` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: parameter /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 189 行.
+NOTIC: [8] Undefined variable: where /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 198 行.
+SQL: SELECT * FROM `lx_bimg` ORDER BY sort desc LIMIT 0,8   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `lx_brand` ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2016-08-11T17:43:24+08:00 ] 222.137.196.2 /Admin/Brand/shop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_brand` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `lx_shop` [ RunTime:0.0123s ]
+NOTIC: [8] Undefined variable: where /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 278 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_shop` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: parameter /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 279 行.
+NOTIC: [8] Undefined variable: where /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 288 行.
+SQL: SELECT * FROM `lx_shop` ORDER BY sort desc LIMIT 0,8   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `lx_brand` ORDER BY sort desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020797s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020844s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2016-08-11T17:43:27+08:00 ] 222.137.196.2 /Admin/Vip/vip.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_vip` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lx_vip` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: List /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/5ae9930a7dd117bef2550879befe7622.php 第 89 行.
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/5ae9930a7dd117bef2550879befe7622.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008329s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000328s ]
+
+[ 2016-08-11T17:43:30+08:00 ] 222.137.196.2 /Admin/Join/join.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_join` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `lx_join` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/826d21380636353e5eb77427857bada1.php 第 92 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000299s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2016-08-11T17:43:33+08:00 ] 222.137.196.2 /Admin/contact/editContact.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_contact` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lx_contact` WHERE ( id= 1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-08-11T17:43:42+08:00 ] 222.137.196.2 /Admin/About/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_about` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_about` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_about` WHERE ( id <> 1 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/66dc9bed425dcf808e9142606813d78c.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007339s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2016-08-11T17:44:26+08:00 ] 123.52.87.76 /index.php/Admin/Index/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0013s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_admin` WHERE ( id = '' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_comment` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_comment` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000296s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000335s ]
+
+[ 2016-08-11T17:44:36+08:00 ] 222.137.196.2 /Admin/Article/article.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0015s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_article` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_article` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_article` WHERE ( status=1 ) ORDER BY arc_id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_arctype` [ RunTime:0.0062s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='18' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000364s ]
+
+[ 2016-08-11T17:44:41+08:00 ] 123.52.87.76 /index.php/Admin/Index/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_admin` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_comment` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_comment` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000352s ]
+
+[ 2016-08-11T17:44:42+08:00 ] 123.52.87.76 /Admin/Index/welcome.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0018s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_record` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_record` WHERE ( admin_id = '1' && last_login > 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lx_record` WHERE ( admin_id = '1' && last_login>1 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006749s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-08-11T17:44:44+08:00 ] 123.52.87.76 /Admin/Ads/position.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0015s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `lx_adposition` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `lx_adposition` ORDER BY id desc  [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037559s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2016-08-11T17:44:45+08:00 ] 123.52.87.76 /Admin/Ads/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_ads` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_ads` WHERE ( 1=1 ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_adposition` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `lx_adposition` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined variable: pid /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/6eb476ef577083bab302ecf789b20c5d.php 第 39 行.
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '8' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '7' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '3' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2016-08-11T17:45:40+08:00 ] 222.137.196.2 /Admin/Ads/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_ads` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_ads` WHERE ( 1=1 ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_adposition` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_adposition` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined variable: pid /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/6eb476ef577083bab302ecf789b20c5d.php 第 39 行.
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '8' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '7' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '3' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-08-11T17:45:45+08:00 ] 123.52.87.76 /Admin/Ads/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_ads` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_ads` WHERE ( 1=1 ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_adposition` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `lx_adposition` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: pid /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/6eb476ef577083bab302ecf789b20c5d.php 第 39 行.
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '8' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '3' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2016-08-11T17:45:47+08:00 ] 123.52.87.76 /Admin/Ads/position.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `lx_adposition` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `lx_adposition` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2016-08-11T17:45:48+08:00 ] 123.52.87.76 /Admin/Ads/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_ads` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_ads` WHERE ( 1=1 ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_adposition` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `lx_adposition` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: pid /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/6eb476ef577083bab302ecf789b20c5d.php 第 39 行.
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '8' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '6' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '4' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '3' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010216s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2016-08-11T17:46:08+08:00 ] 222.137.196.2 /Admin/Ads/update/id/13.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_ads` WHERE ( id='13' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_adposition` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_adposition` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000379s ]
+
+[ 2016-08-11T17:46:38+08:00 ] 222.137.196.2 /Admin/Ads/update.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0018s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0011s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /alidata/www/work/hkp/09/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+SQL: UPDATE `lx_ads` SET `title`='关于我们底部',`pid`='2',`id`='13',`image`='/Uploads/admin/Ads/2016-08-11/1470908798_55779681757ac497e3c7b1.jpg' WHERE ( id='13' ) [ RunTime:0.0003s ]
+
+[ 2016-08-11T17:46:38+08:00 ] 222.137.196.2 /Admin/Ads/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0013s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_ads` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_ads` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_ads` WHERE ( 1=1 ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_adposition` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lx_adposition` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: pid /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/6eb476ef577083bab302ecf789b20c5d.php 第 39 行.
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '8' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '7' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '3' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `lx_adposition` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2016-08-11T17:46:40+08:00 ] 123.52.87.76 /Admin/Comment/feedback_list.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_comment` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_comment` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_comment` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2016-08-11T17:51:58+08:00 ] 222.137.196.2 /Admin/Article/article.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0015s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_article` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_article` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_article` WHERE ( status=1 ) ORDER BY arc_id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_arctype` [ RunTime:0.0009s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='18' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2016-08-11T17:52:10+08:00 ] 222.137.196.2 /Admin/Article/article.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_article` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_article` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_article` WHERE ( status=1 ) ORDER BY arc_id desc LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_arctype` [ RunTime:0.0007s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='18' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2016-08-11T17:52:14+08:00 ] 222.137.196.2 /Admin/Brand/shop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_brand` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `lx_shop` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: where /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 278 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_shop` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: parameter /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 279 行.
+NOTIC: [8] Undefined variable: where /alidata/www/work/hkp/09/Application/Admin/Controller/BrandController.class.php 第 288 行.
+SQL: SELECT * FROM `lx_shop` ORDER BY sort desc LIMIT 0,8   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `lx_brand` ORDER BY sort desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008232s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2016-08-11T17:52:21+08:00 ] 222.137.196.2 /Admin/Vip/vip.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_vip` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `lx_vip` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+NOTIC: [8] Undefined index: List /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/5ae9930a7dd117bef2550879befe7622.php 第 89 行.
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/5ae9930a7dd117bef2550879befe7622.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000320s ]
+
+[ 2016-08-11T17:52:26+08:00 ] 222.137.196.2 /Admin/Join/join.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0012s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_join` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `lx_join` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: page /alidata/www/work/hkp/09/Application/Runtime/Cache/Admin/826d21380636353e5eb77427857bada1.php 第 92 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000337s ]
+
+[ 2016-08-11T17:52:28+08:00 ] 222.137.196.2 /Admin/Join/editFuli.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_join` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `lx_join` WHERE ( id= 2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000287s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000328s ]
+
+[ 2016-08-11T17:52:32+08:00 ] 222.137.196.2 /Admin/Article/article.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_article` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_article` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_article` WHERE ( status=1 ) ORDER BY arc_id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_arctype` [ RunTime:0.0007s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='18' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000299s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000352s ]
+
+[ 2016-08-11T17:53:03+08:00 ] 123.52.87.76 /index.php/Admin/Index/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lx_admin` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_comment` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_comment` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-08-11T17:53:04+08:00 ] 123.52.87.76 /Admin/Index/welcome.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id = '1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_record` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_record` WHERE ( admin_id = '1' && last_login > 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lx_record` WHERE ( admin_id = '1' && last_login>1 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2016-08-11T17:53:06+08:00 ] 123.52.87.76 /Admin/Article/article.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0016s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_article` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lx_article` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: pagenav /alidata/www/work/hkp/09/Application/Common/Common/function.php 第 31 行.
+SQL: SELECT * FROM `lx_article` WHERE ( status=1 ) ORDER BY arc_id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lx_arctype` [ RunTime:0.0008s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `type_name` FROM `lx_arctype` WHERE ( type_id='18' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2016-08-11T17:53:08+08:00 ] 123.52.87.76 /Admin/Article/edit_art/id/21.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Undefined index: uid /alidata/www/work/hkp/09/Application/Admin/Controller/PublicController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `lx_admin` [ RunTime:0.0017s ]
+SQL: SELECT `name` FROM `lx_admin` WHERE ( id='' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lx_article` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lx_article` WHERE ( arc_id='21' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+

@@ -1,0 +1,68 @@
+
+<article class="page-container">
+	<form action="" method="post" class="form form-horizontal" id="form-member-add">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>用户名：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="{$con.username}" placeholder="" id="username" name="username" disabled="disabled">
+				<input type="hidden" name="id"  value="{$con.id}" />
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">留言内容：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<textarea name="beizhu" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" onKeyUp="textarealength(this,100)" disabled="disabled" >{$con.p_content}</textarea>
+				<!-- <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p> -->
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>状态：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="radio-box">
+				<if condition="$con.status eq 0">
+					<input name="status" type="radio" id="sex-1" value="0" checked>
+					<else/>
+					<input name="status" type="radio" id="sex-1" value="0" >
+					</if>
+					<label for="sex-1">未读</label>
+				</div>
+				<div class="radio-box">
+				<if condition="$con.status eq 1">
+					<input type="radio" id="sex-2" value="1" name="status" checked>
+					<else/>
+					<input type="radio" id="sex-2" value="1" name="status">
+					</if>
+					<label for="sex-2">已读</label>
+				</div>
+				
+			</div>
+		</div>
+
+
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" id="tj" type="button" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+<script type="text/javascript">
+	$(function(){
+		
+		$("#tj").click(function(){
+			var id=$("input[name=id]").val();
+
+			var status=$("input[name='status']:checked").val();
+
+			$.post("{:U('Comment/edit')}",{id:id,status:status},function(sb){
+				if(sb.status==1){alert(sb.info);
+					parent.location.reload();
+				}
+				if(sb.status==0){
+					alert(sb.info);
+					alert("修改失败");return false;
+				}
+			})
+		})
+	})
+</script>

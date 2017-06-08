@@ -1,0 +1,187 @@
+
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 用户中心 <span class="c-gray en">&gt;</span> 用户管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+<form action="{:U('Member/member_list')}" method="post"> 
+	<div class="text-c"> 会员查询：
+		<input type="text" name="f_name" style="width:250px" class="input-text" placeholder="用户名或者电话" value="{$fname}">
+		
+		<button class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+	</div>
+</form>
+
+<div class="page-container">
+	
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
+	<span class="l">
+	<if condition="$module['member']['del']">
+	<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
+	</if>
+	<if condition="$module['member']['add']">
+	<a href="javascript:;" onclick="member_add('添加用户','{:U('Member/member_add')}','','510')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a>
+	</if>
+	</span>
+	<span class="r">共有数据：<strong><?php echo count($user_info)?></strong> 条</span> 
+	</div>
+	<div class="mt-20">
+	<table class="table table-border table-bordered table-hover table-bg table-sort">
+		<thead>
+			<tr class="text-c">
+				<th width="25"><input type="checkbox" name="" value=""></th>
+				<th width="80">ID</th>
+				<th width="100">用户名</th>
+				<th width="100">姓名</th>
+				<th width="40">性别</th>
+				<th width="90">手机</th>
+				<th width="150">邮箱</th>
+				<th width="130">加入时间</th>
+				<th width="70">状态</th>
+				<th width="100">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		<volist name="user_info" id="v">
+			<tr class="text-c">
+				<td class="hidden-xs" uid="{$v.id}"><input type="checkbox" value="1" name=""></td>
+				<td>{$v.id}</td>
+				<td><u style="cursor:pointer" class="text-primary" onclick="member_show('{$v.username}','{:U('Member/member_show',array('id'=>$v['id']))}','{$v.id}','360','400')">{$v.username}</u></td>
+				<td>{$v.name}</td>
+				<td><if condition="$v['sex'] eq 1">男<elseif condition="$v['sex'] eq 2"/>女<else/>保密</if></td>
+				<td>{$v.phone}</td>
+				<td>{$v.email}</td>
+				<td>{$v.add_time|date="Y-m-d H:i:s",###}</td>
+				<td class="td-status">
+				<if condition="$v['status'] eq 1">
+					<span class="label label-success radius">已启用</span>
+				<else/>
+					<span class="label label-defaunt radius">已停用</span>
+				</if>
+				</td>
+				<td class="td-manage">
+				<if condition="$module['member']['edit']">
+				<if condition="$v['status'] eq 1">
+					<a style="text-decoration:none" onClick="member_stop(this,'{$v.id}')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe631;</i></a> 
+				<else/>
+					<a style="text-decoration:none" onClick="member_start(this,'{$v.id}')" href="javascript:;" title="启用"><i class="Hui-iconfont">&#xe6e1;</i></a>
+				</if>
+					<!-- <a title="编辑" href="javascript:;" onclick="member_edit('编辑','member-add.html','4','','510')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> -->
+					<a style="text-decoration:none" class="ml-5" onClick="change_password('修改密码','{:U('Member/change_password',array('id'=>$v['id']))}','{$v.id}','600','270')" href="javascript:;" title="修改密码"><i class="Hui-iconfont">&#xe6df;</i></a>
+				</if>
+				<if condition="$module['member']['del']">
+					<a title="删除" href="javascript:;" onclick="member_del(this,'{$v.id}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+				</if>
+				</td>
+			</tr>
+		</volist>
+		</tbody>
+		
+	</table>
+		<br>
+		<?php
+		$count=count($user_info);
+			if($count>10){
+		?>
+		<div class="paginate" style="float:right;">{$page}</div>
+		<?php
+		}
+		?>
+
+	</div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/lib/laypage/1.2/laypage.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/admin/lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript">
+/*用户-添加*/
+function member_add(title,url,w,h){
+	layer_show(title,url,w,h);
+}
+/*用户-查看*/
+function member_show(title,url,id,w,h){
+	layer_show(title,url,w,h);
+}
+/*用户-停用*/
+function member_stop(obj,id){
+	layer.confirm('确认要停用吗？',function(index){
+		$.post("{:U('Member/member_stop')}",{'id':id},function(data){
+			if(data.status==1){
+				$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="member_start(this,'+id+')" href="javascript:;" title="启用"><i class="Hui-iconfont">&#xe6e1;</i></a>');
+				$(obj).parents("tr").find(".td-status").html('<span class="label label-defaunt radius">已停用</span>');
+				$(obj).remove();
+				layer.msg('已停用!',{icon: 5,time:1000});
+			}
+		});
+		
+	});
+}
+
+/*用户-启用*/
+function member_start(obj,id){
+	layer.confirm('确认要启用吗？',function(index){
+		$.post("{:U('Member/member_start')}",{'id':id},function(data){
+			if(data.status==1){
+				$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="member_stop(this,'+id+')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe631;</i></a>');
+				$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已启用</span>');
+				$(obj).remove();
+				layer.msg('已启用!',{icon: 6,time:1000});
+			}
+		});
+	});
+}
+/*用户-编辑*/
+function member_edit(title,url,id,w,h){
+	layer_show(title,url,w,h);
+}
+/*密码-修改*/
+function change_password(title,url,id,w,h){
+	
+	layer_show(title,url,w,h);
+}
+/*用户-删除*/
+function member_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$.post("{:U('Member/member_del')}",{'id':id},function(data){
+			if(data.status==1){
+				$(obj).parents("tr").remove();
+				layer.msg('已删除!',{icon:1,time:1000});
+			}
+		});
+		
+	});
+}
+
+//批量删除
+function datadel(){
+	var ids = "";
+   $(".hidden-xs").each(function () {
+	   var p = $(this);
+	   if (p.children().is(":checked")) {
+		   ids += p.attr('uid') + ',';
+	   }
+   });
+   if (ids == "") {
+            layer.msg("您什么都没有选择呢",{icon:2});
+            return false
+        };
+		layer.confirm("你确定要全部删除吗？", {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+		$.post('{:U("Member/delall")}',{'ids':ids},function(data){
+			if(data.status==1){
+			layer.msg('删除成功！',{icon:1});
+				$(".hidden-xs").children().attr("checked",false);
+			setTimeout(function () {
+							location.reload();
+						}, 2000);
+			}else{
+			layer.msg('删除失败！',{icon:2});
+			}
+			
+			})
+		})
+   
+}
+</script> 
