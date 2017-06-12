@@ -115,22 +115,22 @@ class CommentController extends PublicController
         $this->display();
     }
 
-////更新状态
-//public function edit(){
-//	$id=I("post.id");
-//	$data=$_POST;
-//	// dump($data);
-//	unset($data['id']);
-//	$result=M('comment')->where("id='$id'")->save($data);
-//	if($result >= 0){
-//		$msg['status']=1;
-//		$msg['info']="修改成功";
-//	}else{
-//			$msg['status']=0;
-//			$msg['info']="修改失败";
-//	}
-//	$this->ajaxReturn($msg);
-//}
+//更新状态
+public function edit(){
+	$id=I("post.id");
+	$data=$_POST;
+	// dump($data);
+	unset($data['id']);
+	$result=M('comment')->where("id='$id'")->save($data);
+	if($result >= 0){
+		$msg['status']=1;
+		$msg['info']="修改成功";
+	}else{
+			$msg['status']=0;
+			$msg['info']="修改失败";
+	}
+	$this->ajaxReturn($msg);
+}
 
 
 }
